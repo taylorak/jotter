@@ -5,6 +5,10 @@ const router = express.Router();
 
 const Jot = require('../models/Jot');
 
+router.get('/jots', (req, res, next) => {
+  res.json({success: true});
+});
+
 router.post('/jot', (req, res, next) => {
   let jot = new Jot({
     content: 'test'
